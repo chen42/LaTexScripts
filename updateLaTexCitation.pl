@@ -67,6 +67,9 @@ sub getRef{
 		}
 	}
 	$author=~s/and  $//;
+	if (!$author){
+		$author="{{".$1."}}" if ($xml=~m|<CollectiveName>(.+)</CollectiveName>|);
+	}
 	my $journal=$1 if ($xml=~m|<MedlineTA>(.+)</MedlineTA>|s);
 	my $year =$1 if ($xml=~m|<PubDate>\s+<Year>(.+)</Year>.+</PubDate>|s);
 	my $vol=$1 if ($xml =~m|<JournalIssue.+>\s+<Volume>(\d+)</Volume>|s);
