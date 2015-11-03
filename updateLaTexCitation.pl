@@ -86,7 +86,7 @@ sub getRef{
 	my $title=$1 if ($xml=~m|<ArticleTitle>(.*)</ArticleTitle>|s);
 	$title=~s/^(.)/\{$1\}/;
 	$title=~s/\.$//;
-	my $bib= "\@Article{pmid$pmid,\n\tAuthor=\"$author\",\n\tTitle=\"\{$title \}\",\n\tJournal=\"$journal\",\n\tYear=\"$year\",\n\tVolume=\"$vol\",\n\tNumber=\"$iss\",\n\tPages=\"$page\"";
+	my $bib= "\@Article{pmid$pmid,\n\tAuthor=\"$author\",\n\tTitle=\"\{$title\}\",\n\tJournal=\"$journal\",\n\tYear=\"$year\",\n\tVolume=\"$vol\",\n\tNumber=\"$iss\",\n\tPages=\"$page\"";
 	if ($pmcid) {	
 		$bib.= ",\n\tNote=\{\{PMCID\}: $pmcid, \{PMID}: $pmid\}"; 
 	} else {
