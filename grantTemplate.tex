@@ -1,0 +1,107 @@
+\documentclass[11pt,notitlepage]{article}
+\usepackage{helvet} % Helvetica font
+\renewcommand*\familydefault{\sfdefault} % Use the sans serif version of the font
+\usepackage[T1]{fontenc}
+\linespread{1.0} % A little extra line spread is better for the Palatino font
+\usepackage{amsfonts, amsmath, amsthm, amssymb} % For math fonts, symbols and environments
+\usepackage{graphicx} % Required for including images
+\usepackage[hidelinks]{hyperref}
+\urlstyle{same}
+\usepackage{booktabs} % Top and bottom rules for table
+\usepackage{wrapfig} % Allows in-line images
+\usepackage{gensymb} % general symbol, such as degree
+\usepackage[labelfont=bf,font=small,font=it]{caption} % Make figure numbering in captions bold
+\usepackage[top=0.5in,bottom=0.5in,left=0.5in,right=0.5in]{geometry} % Reduce the size of the margin
+\usepackage[compact]{titlesec}
+\usepackage{textgreek}
+\usepackage{epstopdf}
+\usepackage{marvosym} % male vs female symbol
+\titlespacing{\subsubsection}{0em}{0.3em}{0.1em}
+\titlespacing{\section}{0em}{0.3em}{0.1em}
+\usepackage{booktabs} % table style
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{siunitx}
+\usepackage{txfonts} % for \upmu
+\newcommand{\textsub}[1]{$_{\text{#1}}$}
+\newcommand{\textsup}[1]{$^{\text{#1}}$}
+\renewcommand{\thesubsubsection}{\arabic{subsection}.\arabic{subsubsection}} % hide the section counter
+\pagestyle{empty} % Remove page numbers
+\hyphenation{ionto-pho-re-tic iso-tro-pic fortran} % Specifies custom hyphenation points for words or words that shouldn't be hyphenated at all
+\setlength{\abovecaptionskip}{0pt} % reduce space
+\usepackage[authoryear]{natbib}
+
+
+%=================
+\begin{document}
+\title{Title of the Grant}
+
+%=================Project summary
+Project Summary
+
+
+\newpage
+%=================Project Narrative
+project narrative.
+
+%============== Specific Aims
+
+\newpage
+
+\section*{Specific Aims}
+
+
+
+Some Intro Text
+
+
+\textbf{Specific Aim 1. } 
+\textbf{Specific Aim 2. } 
+\textbf{Specific Aim 3. } 
+
+
+
+%=========== Research Plan
+\newpage
+\section*{Significance}
+
+\section*{Innovation}
+
+\section*{Approach}
+
+%\begin{wrapfigure}[]{r}{0.3\textwidth}
+%	\centering
+%	\vspace{-24 pt}
+%	\includegraphics[width=0.29\textwidth]{fig_single_rat_licking.png}
+	%\setlength{\abovecaptionskip}{1pt} % reduce space
+%	\caption{Operant chamber setup.}
+%	\label{fig:operant}
+%\end{wrapfigure}
+
+%\begin{wraptable}[]{l}{0.26\textwidth}
+%\small
+%\vspace{-12pt}
+%\caption{Behavioral Tests.}\label{tab1}
+%\begin{tabular}{c  l}
+%\toprule
+%PND & Procedure  \\
+%\midrule
+%35 & Open field \\
+%\bottomrule
+%\end{tabular}
+%\end{wraptable} 
+
+
+
+\subsection*{Specific Aim 1. }
+
+\underline{Rationale.} 
+
+\underline{Experimental Design.} 
+
+\underline{Limitations and Pitfalls.}
+
+\newpage
+\raggedright
+\bibliography{grant} % Use the grant.bib file for the reference list
+\bibliographystyle{nihunsrt} % Use the nihunsrt bibliography style
+\end{document}
