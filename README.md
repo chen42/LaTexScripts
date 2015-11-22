@@ -3,6 +3,6 @@ I am warming up to using vim and LaTex for writing manuscripts and NIH grants. T
 
 ```
 nmap <silent>,c :exe "!./updateLaTexCitation.pl %"<CR><CR> 
-nmap <silent>,w :exe "!latexmk -pdf  %"<CR><CR> 
+nmap <silent>,w :w!<CR><CR>:exe "!latexmk -pdf  %; latexmk -c %"<CR><CR> 
 ```
 
