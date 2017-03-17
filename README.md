@@ -1,5 +1,13 @@
-# misc_scripts
-I am warming up to using vim and LaTex for writing manuscripts and NIH grants. This repo contains my config files. I place the updateLatexCitation.pl file in the same dir as the tex file.  I have the following two lines in my .vimrc to add new PubMed citations to the bibtex file and update the pdf. 
+# LaTex scripts for NIH grants  
+
+I am using vim and LaTex for writing manuscripts and NIH grants. My citations are like this:
+
+
+```
+\citep{pmid24289793, pmid21796102}
+```
+
+I place the updateLatexCitation.pl file in the same dir as the tex file.  The following two lines in my .vimrc allows me to add new PubMed citations to the bibtex file and update the pdf. 
 
 ```
 nmap <silent>,c :exe "!./updateLaTexCitation.pl %"<CR><CR> 
