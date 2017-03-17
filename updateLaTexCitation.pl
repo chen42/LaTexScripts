@@ -8,7 +8,7 @@
 # Author: Hao Chen (inbox @ haochen . name)
 # License: Creative Commons Attribution 4.0 International 
 
-use LWP::Simple qw(get);
+#use LWP::Simple qw(get);
 
 $tex=$ARGV[0];
 $bib="bb".$ARGV[0];
@@ -51,8 +51,9 @@ close(C);
 
 sub getRef{
 	my $pmid=shift;
-	my $xml=get("http://130.14.29.110/entrez/eutils/efetch.fcgi?db=pubmed&id=$pmid&retmode=xml&rettype=citation");
-#	print $xml;
+	open(XML, "wget -q -O -  'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=$pmid&retmode=xml&rettype=citation' | ");
+	local $/;
+	$xml=<XML>;
 	$xml =~m|<AuthorList(.+)</AuthorList>|s ;
 	my @authors=split(/\n/, $1);
 	foreach (@authors) {
